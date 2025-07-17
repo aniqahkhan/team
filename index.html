@@ -104,10 +104,10 @@
       room1: {
         panorama: 'vr.jpeg',
         hotspots: [
-          { pitch: 10, yaw: 100, type: 'navigation', target: 'room2' },
-          { pitch: -9, yaw: -187, type: 'info', id: 'team.jpg' },
-          { pitch: -12, yaw: -145, type: 'info', id: 'image' },
-          { pitch: 15, yaw: 60, type: 'info', id: 'video' }
+          { pitch: 10, yaw: 100, type: 'navigation', target: 'chapteh' },
+          { pitch: -9, yaw: -187, type: 'info', id: 'goli' },
+          { pitch: -12, yaw: -145, type: 'info', id: 'gasing' },
+          { pitch: 15, yaw: 60, type: 'info', id: 'kuti' }
         ]
       },
       room2: {
@@ -163,13 +163,16 @@
         hotSpotDiv.title = 'More Info';
 
         hotSpotDiv.addEventListener('click', () => {
-          if (args.id === 'text') {
-            showOverlay(`<h2>Welcome!</h2><p>This is a simple text-only popup for demonstration purposes.</p>`);
-          } else if (args.id === 'image') {
-            showOverlay(`<h2>Artifact Display</h2><p>This bear is from Singapore Discovery Centre</p><img src="gorilla.jpg" alt="gorilla face">`);
-          } else if (args.id === 'video') {
-            showOverlay(`<h2>Restoration Video</h2><p>Watch how this place was restored over time.</p><video controls><source src="documentary.mp4" type="video/mp4">Your browser does not support the video tag.</video>`);
-          }
+          if (args.id === 'chapteh') {
+  showOverlay(`<h2>Chapteh</h2><p>Chapteh is a traditional game played by kicking a feathered shuttlecock and keeping it airborne.</p><img src="chapteh.jpeg" alt="chapteh">`);
+} else if (args.id === 'goli') {
+  showOverlay(`<h2>Goli (Marbles)</h2><p>Goli is a marble game often played in sandpits. Players aim to hit opponent’s marbles out of a circle.</p><img src="goli.jpeg" alt="goli">`);
+} else if (args.id === 'gasing') {
+  showOverlay(`<h2>Gasing (Spinning Top)</h2><p>Gasing is a spinning top game where players launch their tops and compete to see whose spins longest.</p><img src="gasing.jpeg" alt="gasing">`);
+} else if (args.id === 'kuti') {
+  showOverlay(`<h2>Kuti-Kuti</h2><p>Kuti-Kuti is a colorful token game where players try to flip their token over the opponent’s.</p><img src="kuti.jpeg" alt="kuti-kuti">`);
+}
+
         });
       }
     }
